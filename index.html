@@ -635,18 +635,50 @@
             </div>
             <div class="character-info">
               <div class="info-group">
-                <div class="info-label">House</div>
-                <div class="info-value">${character.house || 'Unknown'}</div>
+                <div class="info-label">Alternate Names</div>
+                <div class="info-value">${character.alternate_names?.join(', ') || 'None'}</div>
               </div>
               <div class="info-group">
                 <div class="info-label">Species</div>
                 <div class="info-value">${character.species || 'Unknown'}</div>
               </div>
               <div class="info-group">
+                <div class="info-label">Gender</div>
+                <div class="info-value">${character.gender || 'Unknown'}</div>
+              </div>
+              <div class="info-group">
+                <div class="info-label">House</div>
+                <div class="info-value">${character.house || 'Unknown'}</div>
+              </div>
+              <div class="info-group">
+                <div class="info-label">Date of Birth</div>
+                <div class="info-value">${character.dateOfBirth || 'Unknown'}</div>
+              </div>
+              <div class="info-group">
+                <div class="info-label">Year of Birth</div>
+                <div class="info-value">${character.yearOfBirth || 'Unknown'}</div>
+              </div>
+              <div class="info-group">
+                <div class="info-label">Wizard</div>
+                <div class="info-value">${character.wizard ? 'Yes' : 'No'}</div>
+              </div>
+              <div class="info-group">
+                <div class="info-label">Ancestry</div>
+                <div class="info-value">${character.ancestry || 'Unknown'}</div>
+              </div>
+              <div class="info-group">
+                <div class="info-label">Eye Colour</div>
+                <div class="info-value">${character.eyeColour || 'Unknown'}</div>
+              </div>
+              <div class="info-group">
+                <div class="info-label">Hair Colour</div>
+                <div class="info-value">${character.hairColour || 'Unknown'}</div>
+              </div>
+              <div class="info-group">
                 <div class="info-label">Wand</div>
                 <div class="info-value">
                   ${character.wand && (character.wand.wood || character.wand.core) ? 
-                    `${character.wand.wood || 'Unknown'} wood, ${character.wand.core || 'unknown'} core` : 
+                    `${character.wand.wood || 'Unknown'} wood, ${character.wand.core || 'Unknown'} core, ${character.wand.length || 'Unknown'} inches` : 
                     'Unknown'}
                 </div>
               </div>
@@ -654,13 +686,19 @@
                 <div class="info-label">Patronus</div>
                 <div class="info-value">${character.patronus || 'Unknown'}</div>
               </div>
+              <div class="info-group">
+                <div class="info-label">Hogwarts Student</div>
+                <div class="info-value">${character.hogwartsStudent ? 'Yes' : 'No'}</div>
+              </div>
+              <div class="info-group">
+                <div class="info-label">Hogwarts Staff</div>
+                <div class="info-value">${character.hogwartsStaff ? 'Yes' : 'No'}</div>
+              </div>
             </div>
             <div class="character-footer">
               <div class="alive-status ${character.alive ? 'alive-yes' : 'alive-no'}">
                 <span class="status-dot"></span>
                 <span class="status-text">${character.alive ? 'Alive' : 'Deceased'}</span>
-              </div>
-              <div>
               </div>
             </div>
           `;
